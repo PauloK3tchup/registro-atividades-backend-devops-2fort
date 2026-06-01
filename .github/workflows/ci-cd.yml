@@ -63,7 +63,7 @@ jobs:
 
       - name: Update image tag
         run: |
-          cd gitops/registro-k8s-2fort/k8s
+          cd gitops/registro-k8s-2fort
           kustomize edit set image \
             paulok3tchup/registro-k8s-2fort=\
             paulok3tchup/registro-k8s-2fort:${{ needs.build-and-push.outputs.image_tag }}
